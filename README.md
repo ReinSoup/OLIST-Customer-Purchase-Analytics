@@ -95,6 +95,12 @@ Key sizes inspected during preparation:
 
 The current project uses cleaned datasets produced by the previous ETL workflow instead of repeating the full data-quality process.
 
+## Data Model
+
+The project is built on the relational structure of the Olist dataset.
+
+![Olist ER Diagram](OLIST_ER_Diagram.png)
+
 ## Customer Identity and Grain
 
 Olist contains both `customer_id` and `customer_unique_id`.
@@ -126,6 +132,24 @@ This represents completed purchasing behavior. Intermediate states such as `ship
 The dataset contains 96,478 delivered orders and 2,963 orders with other statuses.
 
 The same rule was used for historical feature construction and the future target.
+
+
+## Data Grain
+
+The source tables operate at different levels of granularity. The analysis therefore aggregates data in stages before creating the customer-level modeling dataset.
+
+![Data Grain](grain_level.png)
+
+```text
+Order Items
+1 row = 1 item within an order
+        ↓
+Orders
+1 row = 1 order
+        ↓
+Customer
+1 row = 1 customer
+```
 
 ## Temporal Framework
 
