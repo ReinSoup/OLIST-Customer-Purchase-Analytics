@@ -99,7 +99,7 @@ The current project uses cleaned datasets produced by the previous ETL workflow 
 
 The project is built on the relational structure of the Olist dataset.
 
-![Olist ER Diagram](OLIST_ER_Diagram.png)
+![Olist ER Diagram](https://github.com/ReinSoup/OLIST-Customer-Purchase-Analytics/blob/main/docs/images/OLIST_ER_Diagram.png)
 
 ## Customer Identity and Grain
 
@@ -138,7 +138,7 @@ The same rule was used for historical feature construction and the future target
 
 The source tables operate at different levels of granularity. The analysis therefore aggregates data in stages before creating the customer-level modeling dataset.
 
-![Data Grain](grain_level.png)
+![Data Grain](https://github.com/ReinSoup/OLIST-Customer-Purchase-Analytics/blob/main/docs/images/grain_level.png)
 
 ```text
 Order Items
